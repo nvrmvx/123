@@ -50,6 +50,16 @@
             border-radius: 5px;
             font-size: 30%;
         }
+        #message2 {
+            display: none;
+            width: 70%;
+            margin: 20px auto 0 auto;
+            padding: 10px;
+            background-color: #e0574b;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 30%;
+        }
     </style>
 </head>
 <body>
@@ -59,22 +69,31 @@
         <br>
         <input type="submit" value="Submit" onclick="checkAnswer()">
         <div id="message"></div>
+        <div id="message2"></div>
     </div>
 
     <script>
         function checkAnswer() {
             var answer = document.getElementById('answerInput').value.trim().toLowerCase();
             var predeterminedCode = 'oliva';
+            var errorCount = 0;
 
             if (answer === predeterminedCode) {
                 document.getElementById('message').innerHTML = 'Good job ;)<br>During choir\'s song, amidst the ball\'s grace,<br>We wandered, but could not open <em>this place</em>.';
                 document.getElementById('message').style.display = 'block';
                 document.getElementById('answerInput').style.color = '#000';
+                document.getElementById('message2').style.display = 'none';
             } else if (answer === 'navat') {
                 document.getElementById('message').innerHTML = 'Haha, nope. We were not a couple then yet :)';
                 document.getElementById('message').style.display = 'block';
+                errorCount = errorCount + 1;
             } else {
                 document.getElementById('answerInput').style.color = '#ff4d4d';
+                errorCount = errorCount + 1;
+            }
+            if (errorCount >= 3) {
+                document.getElementById('message2').innerHTML = 'You could always ask Nurmukh for a clue ;)';
+                document.getElementById('message2').style.display = 'block';
             }
         }
     </script>
