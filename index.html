@@ -53,7 +53,7 @@
 </head>
 <body>
     <div class="container">
-        <h2>What is the answer?</h2>
+        <h2>What is the name of the first place that we dined at after becoming a couple?</h2>
         <input type="text" id="answerInput" placeholder="Your answer...">
         <br>
         <input type="submit" value="Submit" onclick="checkAnswer()">
@@ -62,13 +62,16 @@
 
     <script>
         function checkAnswer() {
-            var answer = document.getElementById('answerInput').value.trim();
-            var predeterminedCode = '12313';
+            var answer = document.getElementById('answerInput').value.trim().toLowerCase();
+            var predeterminedCode = 'oliva';
 
             if (answer === predeterminedCode) {
                 document.getElementById('message').innerHTML = 'Good job ;)<br>During choir\'s song, amidst the ball\'s grace,<br>We wandered, but could not open <em>this place</em>.';
                 document.getElementById('message').style.display = 'block';
                 document.getElementById('answerInput').style.color = '#000';
+            } else if (answer === 'navat') {
+                document.getElementById('message').innerHTML = 'Haha, nope. We were not a couple then yet :)';
+                document.getElementById('message').style.display = 'block';
             } else {
                 document.getElementById('answerInput').style.color = '#ff4d4d';
             }
