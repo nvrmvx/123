@@ -73,10 +73,10 @@
     </div>
 
     <script>
+        var errorCount = 0;
         function checkAnswer() {
             var answer = document.getElementById('answerInput').value.trim().toLowerCase();
             var predeterminedCode = 'oliva';
-            var errorCount = 0;
 
             if (answer === predeterminedCode) {
                 document.getElementById('message').innerHTML = 'Good job ;)<br>During choir\'s song, amidst the ball\'s grace,<br>We wandered, but could not open <em>this place</em>.';
