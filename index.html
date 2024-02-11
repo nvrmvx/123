@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        #message {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>What is the answer?</h2>
+        <input type="text" id="answerInput" placeholder="Your answer...">
+        <br>
+        <input type="submit" value="Submit" onclick="checkAnswer()">
+        <div id="message"></div>
+    </div>
+
+    <script>
+        function checkAnswer() {
+            var answer = document.getElementById('answerInput').value.trim();
+            // Placeholder for the predetermined code
+            var predeterminedCode = 'your predetermined code';
+
+            if (answer === predeterminedCode) {
+                document.getElementById('message').innerHTML = 'Correct answer!';
+                document.getElementById('message').style.display = 'block';
+            } else {
+                document.getElementById('message').innerHTML = 'Incorrect answer. Try again.';
+                document.getElementById('message').style.backgroundColor = '#ff4d4d';
+                document.getElementById('message').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
