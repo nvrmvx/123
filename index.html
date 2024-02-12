@@ -60,7 +60,7 @@
             border-radius: 5px;
             font-size: 30%;
         }
-        h1,h2,h3 {
+        h1,h2,h5 {
             font-size: 80%;
         }
     </style>
@@ -68,7 +68,7 @@
 <body>
     <div class="container">
         <h1>QUIZ TIME</h1>
-        <h3>Since you like to remember the first times :)</h3>
+        <h5>Since you like to remember the first times :)</h3>
         <h2>What is the name of the first place that we dined at after becoming a couple? (not counting canteens)</h2>
         <input type="text" id="answerInput" placeholder="Your answer...">
         <br>
@@ -84,7 +84,7 @@
             var predeterminedCode = 'oliva';
 
             if (answer === predeterminedCode) {
-                document.getElementById('message').innerHTML = 'Good job ;)<br>During choir\'s song, amidst the ball\'s grace,<br>We wandered, but could <em>not</em> open <em>this place</em>.';
+                document.getElementById('message').innerHTML = 'Good job ;)<br>Now you're going to have to collect parts of a puzzle across the university!<br>The next clue is:<br>During choir\'s song, amidst the ball\'s grace,<br>We wandered, but could <em>not</em> open <em>this place</em>.';
                 document.getElementById('message').style.display = 'block';
                 document.getElementById('answerInput').style.color = '#000';
                 document.getElementById('message2').style.display = 'none';
